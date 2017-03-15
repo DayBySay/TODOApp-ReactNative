@@ -20,6 +20,7 @@ DerivedData
 *.ipa
 *.xcuserstate
 project.xcworkspace
+ios/build/
 
 # Gradle
 /build/
@@ -57,3 +58,6 @@ node_modules
 
 /third-party
 Contact GitHub API Training Shop Blog About
+
+# index.*.js
+index.*.js
