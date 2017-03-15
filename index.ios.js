@@ -1,10 +1,21 @@
 import React, { Component } from'react'
 import { AppRegistry, Text, View } from 'react-native'
 
-class Greeting extends Component {
+class Blink extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {showText: true}
+
+        setInterval(() => {
+            console.log("unko")
+            this.setState({showText: !this.state.showText})
+        }, 1000)
+    }
+
     render() {
+        let display = this.state.showText ? this.props.text : ' '
         return (
-            <Text>Hello {this.props.name}!</Text>
+            <Text>{display}</Text>
         )
     }
 }
@@ -13,7 +24,9 @@ class TODOApp extends Component {
     render() {
         return(
             <View style={{alignItems: 'center'}}>
-                <Greeting name='Takachon' />
+                <Blink text='waiwai' />
+                <Blink text='wuiwui' />
+                <Blink text='weiwei' />
             </View>
         )
     }
