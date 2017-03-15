@@ -1,13 +1,20 @@
 import React, { Component } from'react'
-import { AppRegistry, Image } from 'react-native'
+import { AppRegistry, Text, View } from 'react-native'
+
+class Greeting extends Component {
+    render() {
+        return (
+            <Text>Hello {this.props.name}!</Text>
+        )
+    }
+}
 
 class TODOApp extends Component {
     render() {
-        let pic = {
-            uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg' 
-        }
         return(
-            <Image source={pic} style={{width: 193, height: 110}}/>
+            <View style={{alignItems: 'center'}}>
+                <Greeting name='Takachon' />
+            </View>
         )
     }
 }
